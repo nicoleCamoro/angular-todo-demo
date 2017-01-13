@@ -1,0 +1,19 @@
+{
+  "name": "angular-demo",
+  "version": "1.0.0",
+  "description": "angular demo for seminar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "angular1",
+    "demo"
+  ],
+  "author": "Franchette Camoro",
+  "license": "ISC",
+  "dependencies": {
+    "materialize-css": "^0.97.8"
+  }
+}
