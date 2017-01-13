@@ -15,5 +15,8 @@
   "license": "ISC",
   "dependencies": {
     "materialize-css": "^0.97.8"
+  },
+  "devDependencies": {
+    "angular": "^1.6.1"
   }
 }

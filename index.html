@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><div class="oneNoteWebClipperIsInstalledOnThisBrowser" style="display: none;"></div><head>
+<html lang="en" ng-app>
+<head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
   <title>Angular TO DO</title>
@@ -7,12 +8,14 @@
   <!-- CSS  -->
   <link href="node_modules\materialize-css\dist\css\materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
+
+  <script src="node_modules\angular\angular.min.js"></script>
 </head>
 <body class="blue">
   <div class="section no-pad-bot " id="index-banner">
     <div class="container">
       <br><br>
-      <h1 class="header center  blue-text text-lighten-5"><b>Just do it!</b></h1>
+      <h1 class="header center  blue-text text-lighten-5"><b>Angular TODO</b></h1>
       <p class="center blue-text text-lighten-5">You have to do <b> 1 </b> thing today</p>
       <br><br>
 
@@ -26,7 +29,7 @@
         <div class="row">
           <div class="input-field col s6 offset-s2 white z-depth-1">
             <label for="task">Task</label>
-            <input id="task" type="text" class="validate" autocomplete="false">
+            <input id="task" type="text" class="validate" autocomplete="false" ng-model="yourTask">
           </div>
           <div class="input-field col offset-s1 ">
             <a href="#" class="btn-large z-depth-3 waves-effect waves-light orange">I'LL DO IT</a>
@@ -39,7 +42,7 @@
           <div>
             <input type="checkbox" id="test6" class="left-align"/>
             <label for="test6">
-              Alvin
+              {{yourTask}}
             </label>
             <a href="#!" class="secondary-content"><i class="material-icons">x</i></a>
           </div>
