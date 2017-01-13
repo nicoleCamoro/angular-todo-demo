@@ -18,7 +18,11 @@
     <div class="container">
       <br><br>
       <h1 class="header center  blue-text text-lighten-5"><b>Angular TODO</b></h1>
-      <p class="center blue-text text-lighten-5">You have to do <b> 1 </b> thing today</p>
+      <p class="center blue-text text-lighten-5">
+        You have to do <b>{{todos.length}}</b>
+        thing<span ng-hide="todos.length === 1" >s</span>
+        today
+      </p>
       <br><br>
 
     </div>
