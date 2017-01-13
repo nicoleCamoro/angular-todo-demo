@@ -36,14 +36,16 @@
 
 
           <!-- Text Input -->
-          <div class="input-field col s6 offset-s2 white z-depth-1">
-            <label for="task">Task</label>
-            <input id="task" type="text" class="validate" autocomplete="false" ng-model="yourTask">
-          </div>
-          <div class="input-field col offset-s1 ">
-            <a href="#" class="btn-large z-depth-3 waves-effect waves-light orange" ng-click="addTodo()">I'LL DO IT</a>
-          </div>
-
+          <form name="todoForm">
+            <div class="input-field col s6 offset-s2 white z-depth-1">
+              <label for="task">Task</label>
+              <input name="input_task" type="text" class="validate" autocomplete="false" ng-model="yourTask" required>
+              <p class="red-text" ng-show="todoForm.input_task.$dirty && todoForm.input_task.$error.required ">Are you sure you have nothing to do?</p>
+            </div>
+            <div class="input-field col offset-s1 ">
+              <a href="#" class="btn-large z-depth-3 waves-effect waves-light orange" ng-disabled="todoForm.input_task.$error.required" ng-click="addTodo()">I'LL DO IT</a>
+            </div>
+          </form>
 
         </div>
 
