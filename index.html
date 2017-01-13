@@ -51,7 +51,7 @@
           <div>
             <input type="checkbox" id="{{$index}}" class="left-align"/>
             <label for="{{$index}}">
-              {{todoItem.text}}
+              {{todoItem.text | uppercase}}
             </label>
             <a href="#!" class="secondary-content" ng-click="deleteTodo($index)"><i class="material-icons">x</i></a>
           </div>

@@ -4,7 +4,7 @@ angular.module('todoApp', [])
     $scope.todos = [
       {text:"Learn angular", done: true},
       {text:"Give a talk", done: false}
-    ]
+    ];
 
     $scope.addTodo = function() {
       $scope.todos.push({text:$scope.yourTask, done: false});
