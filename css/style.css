@@ -28,3 +28,8 @@ body{
  .input-field .prefix.active {
    color: #2196f3     ;
  }
+
+.done-true {
+  text-decoration: line-through;
+  color: grey;
+ }
