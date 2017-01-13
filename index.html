@@ -37,7 +37,7 @@
             <input id="task" type="text" class="validate" autocomplete="false" ng-model="yourTask">
           </div>
           <div class="input-field col offset-s1 ">
-            <a href="#" class="btn-large z-depth-3 waves-effect waves-light orange">I'LL DO IT</a>
+            <a href="#" class="btn-large z-depth-3 waves-effect waves-light orange" ng-click="addTodo()">I'LL DO IT</a>
           </div>
 
 
@@ -47,13 +47,13 @@
 
       <!-- Tasks -->
       <ul class="collection z-depth-1">
-        <li class="collection-item" ng-repeat="todoItem in todos">
+        <li class="collection-item" ng-repeat="todoItem in todos track by $index">
           <div>
-            <input type="checkbox" id="test6" class="left-align"/>
-            <label for="test6">
+            <input type="checkbox" id="{{$index}}" class="left-align"/>
+            <label for="{{$index}}">
               {{todoItem.text}}
             </label>
-            <a href="#!" class="secondary-content"><i class="material-icons">x</i></a>
+            <a href="#!" class="secondary-content" ng-click="deleteTodo($index)"><i class="material-icons">x</i></a>
           </div>
         </li>
       </ul>

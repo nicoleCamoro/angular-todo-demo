@@ -6,5 +6,14 @@ angular.module('todoApp', [])
       {text:"Give a talk", done: false}
     ]
 
+    $scope.addTodo = function() {
+      $scope.todos.push({text:$scope.yourTask, done: false});
+    }
+
+    $scope.deleteTodo = function(item) {
+      $scope.todos.splice(item, 1);
+
+    }
+
 
   }]);
