@@ -15,5 +15,12 @@ angular.module('todoApp', [])
 
     }
 
+    $scope.countDone = function() {
+      var count = 0;
+      angular.forEach($scope.todos, function(t) {
+        count += t.done ? 0 : 1;
+      })
+      return count;
+    }
 
   }]);
